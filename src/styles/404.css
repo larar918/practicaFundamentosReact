@@ -1,0 +1,6 @@
+.page .errorMessage h2 span.errorText {
+  display: inline-block;
+  border: 2px solid lightgray;
+  padding: 25px 150px 25px 150px;
+  background-color: #f6f6f6;
+}

@@ -1,0 +1,111 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.navbar {
+  background-color: #00C5AC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px 0px 15px;
+}
+
+.navbarContent {
+  font-size: 30px;
+  padding: 20px;
+  color:white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.submit {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #00C5AC;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-right: 5px;
+  margin-top: 3px;
+  width: 300px;
+}
+
+.submit:hover{
+  background-color: #009e8e;   
+}
+
+.types {
+  margin-top: 20px;
+}
+
+.ad{
+  display: flex;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  margin: 15px auto;
+  padding-left: 20px;
+  width: 1000px; 
+
+}
+
+.ad-detail{
+  margin-top:100px;
+}
+
+.adList {
+  list-style: none;
+}
+
+.ad-detail-container .delete-button{
+  margin-left: 35%;
+}
+
+.content-table {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto; 
+  margin-left: -200px;/* Agrega este estilo para centrar la tabla */
+}
+
+.filter-cell,
+.ad-list-cell {
+  vertical-align: top; 
+}
+
+.filter-container input,
+.filter-container select {
+  width: 100%; 
+  padding: 8px; 
+  box-sizing: border-box; 
+}
+
+.emptyListContainer {
+    display: inline-block;
+    margin-left: -800px;
+}
+
+.adsNotFound {
+  margin-left: -150%;
+  display: inline-block;
+  border: 2px solid lightgray;
+  padding: 1px 80px 1px 80px;
+  background-color: #f6f6f6;
+  height: 6%;
+}
+
+h2 {
+  margin-bottom: 35px;
+}
+  
+  
+
+
+
