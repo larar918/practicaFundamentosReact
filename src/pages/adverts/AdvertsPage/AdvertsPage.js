@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAds } from '../service';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Layout from '../../../components/Layout';
 import Ad from '../components/ad';
 
@@ -13,7 +13,6 @@ function AdvertsPage() {
   const [filteredAds, setFilteredAds] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
   const [transactionFilter, setTransactionFilter] = useState('todos');
-  const navigate = useNavigate(); 
 
 const EmptyList = () => (
   <div className='page'>
@@ -64,18 +63,14 @@ const handleDeleteFilters = () => {
               <tr>
                 <td className='filter-cell'>
                   <div className='filter-container'>
-                    <label>
-                      Nombre:
+                    <label>Nombre:</label>
                       <input type='text' value={nameFilter} onChange={handleNameFilterChange} className='formElement' />
-                    </label>
-                    <label>
-                      Compra/Venta:
+                    <label>Compra/Venta: </label>
                       <select value={transactionFilter} onChange={handleTransactionFilterChange} className='formElement'>
                         <option value='todos'>Todos</option>
                         <option value='venta'>Venta</option>
                         <option value='compra'>Compra</option>
                       </select>
-                    </label>
                     <button type='button' onClick={handleApplyFilters} className='submit longButton'>Aplicar Filtros</button>
                     <button type='button' onClick={handleDeleteFilters} className='submit longButton'>Borrar Filtros</button>
                   </div>

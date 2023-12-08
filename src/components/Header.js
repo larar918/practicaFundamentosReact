@@ -17,21 +17,25 @@ function Header(){
         navigate('/login');
     }
 
-    return <header>
-        <div>
-            <nav className = 'navbar'>
-                <Link to='/adverts' className="navbarContent">NodePop</Link>
-                <div className='options'>
-                    {isLogged && !isOnNewAdvertPage && ( // Muestra botón si estálogado y no está en /adverts/new
-                        <Link to='/adverts/new' className="submit">Crear anuncio</Link>
-                    )}
-                    {isLogged && (
-                        <button onClick={handleLogOut} className="submit" disabled={false}>Log Out</button> // Muestra el botón si está logado
-                    )}
-                </div>
-            </nav>
-        </div>
-    </header>
+    return (
+        <header>
+            <div>
+                <nav className='navbar'>
+                    <Link to='/adverts' className="navbarContent">NodePop</Link>
+                    <div className='options'>
+                        <div className='left-options'>
+                            {isLogged && !isOnNewAdvertPage && (
+                                <Link to='/adverts/new' className="submit navbar-button">Crear anuncio</Link>
+                            )}
+                        </div>
+                        {isLogged && (
+                            <button onClick={handleLogOut} className="submit navbar-button" disabled={false}>Log Out</button>
+                        )}
+                    </div>
+                </nav>
+            </div>
+        </header>
+    );
 }
 
 export default Header;
