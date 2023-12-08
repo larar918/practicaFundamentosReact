@@ -37,7 +37,7 @@ function AdvertPage() {
           <article className="ad-detail ad">
             <div>
               <p><b>Nombre: </b>{ad.name}</p>
-              <p><b>Venta: </b>{String(ad.sale)}</p> 
+              <p><b>Transacción: </b>{ad.sale ? 'Venta' : 'Compra'}</p> 
               <p><b>Precio: </b>{ad.price}</p>
               <p><b>Tags: </b> {ad.tags.join(', ')}</p>
               {ad.photo !== null && <p><b>Foto: </b> {ad.photo}</p>} 

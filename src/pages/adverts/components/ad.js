@@ -8,7 +8,7 @@ const Ad = ({ name, sale, price, tags}) => {
     <article className="ad">
         <div>
             <p><b>Nombre: </b>{name}</p>
-            <p><b>Venta: </b>{String(sale)}</p> 
+            <p><b>Transacción: </b>{sale ? 'Venta' : 'Compra'}</p> 
             <p><b>Precio: </b>{price}</p>
             <p><b>Tags: </b> {tags.join(', ')}</p>
         </div>
@@ -24,5 +24,3 @@ Ad.propTypes = {
 }
 
 export default Ad;
-
-// Pasamos el venta a string porque es un boleano
